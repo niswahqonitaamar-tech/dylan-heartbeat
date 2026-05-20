@@ -847,15 +847,15 @@ const html = `<!DOCTYPE html>
     <!-- 配置表单 -->
     <div class="config-box">
       <form action="/admin/save" method="post">
-        <label>API 地址</label>
+        <label>API URL</label>
         <input name="target_url" id="f_url" value="${currentUrl}">
         <label>API Key</label>
         <input name="target_key" id="f_key" placeholder="留空不修改">
-        <label>模型名称</label>
+        <label>Model Name</label>
         <input name="model_name" id="f_model" value="${currentModel}">
         <label>Bark Key</label>
         <input name="bark_key" placeholder="留空不修改">
-        <label>自定义图标 URL</label>
+        <label>Bark Icon URL</label>
         <input name="custom_icon" value="${currentIcon}" placeholder="可选">
         <button type="submit" class="save">保存配置</button>
       </form>
