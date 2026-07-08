@@ -1,23 +1,12 @@
 [build]
+  command = "echo 'No build needed'"
+  publish = "."
   functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"
+
 [[redirects]]
-  from = "/api/*"
+  from = "/*"
   to = "/.netlify/functions/api/:splat"
   status = 200
-
-[[redirects]]
-  from = "/health"
-  to = "/.netlify/functions/api/health"
-  status = 200
-
-[[redirects]]
-  from = "/send-morning"
-  to = "/.netlify/functions/api/send-morning"
-  status = 200
-
-[[redirects]]
-  from = "/send-evening"
-  to = "/.netlify/functions/api/send-evening"
-  status = 200
-
